@@ -2,9 +2,9 @@
 
 namespace App\Users\Application;
 
-use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 
 interface UsersQuery
 {
-    public function execute(): Collection;
+    public function execute(): AnonymousResourceCollection;
 }

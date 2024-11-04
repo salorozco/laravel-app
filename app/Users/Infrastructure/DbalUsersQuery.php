@@ -2,9 +2,10 @@
 
 namespace App\Users\Infrastructure;
 
-use App\Models\User;
+use App\Framework\Http\Resources\UserResource;
+use App\Framework\Models\User;
 use App\Users\Application\UsersQuery;
-use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 
 class DbalUsersQuery implements UsersQuery
 {
@@ -14,8 +15,9 @@ class DbalUsersQuery implements UsersQuery
         $this->user = $user;
     }
 
-    public function execute(): Collection
+    public function execute(): AnonymousResourceCollection
     {
-        return $this->user::all();
+        $users = $this->user->all();
+        return UserResource::collection($users);
     }
 }

@@ -2,8 +2,8 @@
 
 namespace App\Users\Presentation;
 
-use App\Http\Controllers\Controller;
-use App\Models\User;
+use App\Framework\Http\Controllers\Controller;
+use App\Framework\Models\User;
 use App\Users\Application\UsersQuery;
 use Illuminate\Http\JsonResponse;
 
@@ -16,10 +16,9 @@ class UserController extends Controller
         $this->usersQuery = $usersQuery;
     }
 
-    public function index(): JsonResponse
+    public function index()
     {
-        $users = $this->usersQuery->execute();
-        return response()->json($users);
+        return $this->usersQuery->execute();
     }
 
     public function show($id): JsonResponse

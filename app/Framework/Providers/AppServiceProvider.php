@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Providers;
+namespace App\Framework\Providers;
 
-use App\Models\User;
+use App\Framework\Models\User;
 use App\Users\Application\UsersQuery;
 use App\Users\Infrastructure\DbalUsersQuery;
 use Illuminate\Support\ServiceProvider;
