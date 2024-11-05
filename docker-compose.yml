@@ -51,6 +51,11 @@ services:
                 - '-p${DB_PASSWORD}'
             retries: 3
             timeout: 5s
+    adminer:
+        image: adminer
+        restart: always
+        ports:
+            - "${ADMINER_FORWARD_PORT}:8080"
     redis:
         image: 'redis:alpine'
         ports:

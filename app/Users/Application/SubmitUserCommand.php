@@ -2,33 +2,22 @@
 
 namespace App\Users\Application;
 
-use DateTime;
-
-class UserDto
+class SubmitUserCommand
 {
-    private string $id;
-
     private string $name;
 
     private string $email;
 
-    private DateTime $created_at;
+    private string $password;
 
     public function __construct(
-        string $id,
         string $name,
         string $email,
-        DateTime $created_at
+        string $password
     ) {
-        $this->id = $id;
         $this->name = $name;
         $this->email = $email;
-        $this->created_at = $created_at;
-    }
-
-    public function getId(): string
-    {
-        return $this->id;
+        $this->password = $password;
     }
 
     public function getName(): string
@@ -41,8 +30,8 @@ class UserDto
         return $this->email;
     }
 
-    public function getCreatedAt(): string
+    public function getPassword(): string
     {
-        return $this->created_at->format('Y-m-d H:i:s');
+        return $this->password;
     }
 }

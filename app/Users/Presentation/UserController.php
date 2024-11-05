@@ -3,32 +3,50 @@
 namespace App\Users\Presentation;
 
 use App\Framework\Http\Controllers\Controller;
-use App\Framework\Models\User;
+use App\Framework\Http\Requests\UserRequest;
+use App\Users\Application\SubmitUserHandler;
 use App\Users\Application\UsersQuery;
+use App\Users\Domain\UserRepository;
 use Illuminate\Http\JsonResponse;
 
 class UserController extends Controller
 {
     private UsersQuery $usersQuery;
 
-    public function __construct(UsersQuery $usersQuery)
-    {
+    private UserRepository $userRepository;
+
+    private UserFormFactory $userFormFactory;
+
+    private SubmitUserHandler $submitUserHandler;
+
+    public function __construct(
+        UsersQuery $usersQuery,
+        UserRepository $userRepository,
+        UserFormFactory $userFormFactory,
+        SubmitUserHandler $submitUserHandler
+    ) {
         $this->usersQuery = $usersQuery;
+        $this->userRepository = $userRepository;
+        $this->userFormFactory = $userFormFactory;
+        $this->submitUserHandler = $submitUserHandler;
     }
 
-    public function index()
+    public function index(): mixed
     {
         return $this->usersQuery->execute();
     }
 
-    public function show($id): JsonResponse
+    public function show($id): mixed
     {
-        $user = User::find($id);
+        return $this->userRepository->findUserById($id);
+    }
 
-        if (!$user) {
-            return response()->json(['error' => 'User not found'], 404);
-        }
+    public function store(UserRequest $request): JsonResponse
+    {
+        $form = $this->userFormFactory->createFromRequest($request);
+        $this->submitUserHandler->handle($form->toCommand());
 
-        return response()->json($user);
+        return response()->json(['message' => 'User created successfully'], 201);
+
     }
 }

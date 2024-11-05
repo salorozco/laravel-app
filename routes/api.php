@@ -11,3 +11,5 @@ Route::get('/user', function (Request $request) {
 Route::get('/user/{id}', [UserController::class, 'show']);
 
 Route::get('/users', [UserController::class, 'index']);
+
+Route::post('/users', [UserController::class, 'store']);
