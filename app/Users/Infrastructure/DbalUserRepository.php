@@ -11,6 +11,12 @@ use App\Users\Domain\UserRepository;
 
 class DbalUserRepository implements UserRepository
 {
+    private UserModel $userModel;
+    public function __construct(UserModel $userModel)
+    {
+        $this->userModel = $userModel;
+    }
+
     public function add(User $user):void
     {
         $userModel = new UserModel;
@@ -26,7 +32,7 @@ class DbalUserRepository implements UserRepository
      */
     public function findUserById(int $id): UserResource
     {
-        $user = UserModel::find($id);
+        $user = $this->userModel::find($id);
 
         if (! $user) {
             throw new UserNotFoundException();

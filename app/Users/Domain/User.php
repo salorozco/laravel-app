@@ -8,7 +8,6 @@ use Ramsey\Uuid\UuidInterface;
 class User
 {
     private UuidInterface $uuid;
-
     private string $name;
 
     private string $email;
