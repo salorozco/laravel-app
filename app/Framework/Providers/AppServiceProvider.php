@@ -23,7 +23,7 @@ class AppServiceProvider extends ServiceProvider
         });
 
         $this->app->bind(UserRepository::class, function ($app) {
-            return new DbalUserRepository;
+            return new DbalUserRepository(new User);
         });
     }
 
