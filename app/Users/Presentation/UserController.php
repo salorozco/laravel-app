@@ -4,10 +4,12 @@ namespace App\Users\Presentation;
 
 use App\Framework\Http\Controllers\Controller;
 use App\Framework\Http\Requests\UserRequest;
+use App\Framework\Http\Resources\UserResource;
 use App\Users\Application\SubmitUserHandler;
 use App\Users\Application\UsersQuery;
 use App\Users\Domain\UserRepository;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 
 class UserController extends Controller
 {
@@ -31,12 +33,12 @@ class UserController extends Controller
         $this->submitUserHandler = $submitUserHandler;
     }
 
-    public function index(): mixed
+    public function index(): AnonymousResourceCollection
     {
         return $this->usersQuery->execute();
     }
 
-    public function show($id): mixed
+    public function show($id): UserResource
     {
         return $this->userRepository->findUserById($id);
     }
@@ -47,6 +49,5 @@ class UserController extends Controller
         $this->submitUserHandler->handle($form->toCommand());
 
         return response()->json(['message' => 'User created successfully'], 201);
-
     }
 }

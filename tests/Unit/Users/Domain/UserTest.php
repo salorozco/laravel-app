@@ -8,7 +8,7 @@ use Tests\TestCase;
 
 class UserTest extends TestCase
 {
-    public function test_it_can_be_created()
+    public function test_user_entity_properties()
     {
         $name = 'John Doe';
         $email = 'john@example.com';
@@ -20,7 +20,6 @@ class UserTest extends TestCase
         $this->assertEquals($email, $user->getEmail());
         $this->assertEquals($password, $user->getPassword());
         $this->assertInstanceOf(UuidInterface::class, $user->getUuid());
-
     }
 
 }
