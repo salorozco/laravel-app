@@ -1,0 +1,105 @@
+[90m= [39m[34;4mIlluminate\Database\Eloquent\Collection[39;24m {#6371
+    [34mall[39m: [
+      [34;4mApp\Models\Post[39;24m {#6372
+        [34mid[39m: [35m6[39m,
+        [34muuid[39m: "[32m4d5eb3e1-39fc-44d3-922b-4f92520789bb[39m",
+        [34mtitle[39m: "[32mAt rem labore non mollitia.[39m",
+        [34mbody[39m: """
+          [32mSed tenetur ratione laborum repellat. Aliquam esse et quis. Sed enim delectus labore harum totam et atque. Et voluptas maxime quibusdam in similique eum sit numquam. Sint enim iusto nemo.[39m\n
+          \n
+          [32mAut sed asperiores molestiae dignissimos optio ipsa. Culpa voluptatibus impedit neque et repellat optio. Placeat provident et sit autem voluptatem velit. Porro ducimus molestias aut voluptate nemo dolore quis.[39m\n
+          \n
+          [32mPerspiciatis unde aut in aperiam voluptatem quia. Eum mollitia illum aliquam architecto quis neque. Cupiditate molestiae libero ut deserunt veritatis.[39m
+          """,
+        [34muser_id[39m: [35m1[39m,
+        [34mslug[39m: "[32mlaborum-dolores-non-in-aut-eum-quo[39m",
+        [34mstatus[39m: "[32mdraft[39m",
+        [34mfeatured_image[39m: "[32mhttps://via.placeholder.com/640x480.png/002211?text=posts+id[39m",
+        [34mviews[39m: [35m102[39m,
+        [34mpublished_at[39m: [36mnull[39m,
+        [34mcreated_at[39m: "[32m2024-11-14 18:42:11[39m",
+        [34mupdated_at[39m: "[32m2024-11-14 18:42:11[39m",
+      },
+      [34;4mApp\Models\Post[39;24m {#6360
+        [34mid[39m: [35m7[39m,
+        [34muuid[39m: "[32ma436bb4c-f511-48bb-a6a3-4bc9ed58f3ca[39m",
+        [34mtitle[39m: "[32mVel ipsa consequatur maiores sunt est quia.[39m",
+        [34mbody[39m: """
+          [32mAut distinctio minima distinctio ut nam velit. Et pariatur earum et excepturi in. Est debitis quaerat et et eum sed itaque.[39m\n
+          \n
+          [32mQuia velit possimus et iure corrupti. Laboriosam dolor blanditiis repudiandae quod. Voluptatum ea repellat ex eligendi impedit id. Hic tenetur consequatur aut ut enim. Labore magni aliquid aut aut reiciendis quas eligendi.[39m\n
+          \n
+          [32mQuibusdam iste molestiae tempora quia ea eaque voluptas. Culpa aut ut doloribus architecto aut dolor officia. Voluptatem qui voluptatibus dolore rerum. Odit consectetur odit blanditiis molestias.[39m
+          """,
+        [34muser_id[39m: [35m1[39m,
+        [34mslug[39m: "[32mqui-repellat-eos-minus-alias[39m",
+        [34mstatus[39m: "[32mdraft[39m",
+        [34mfeatured_image[39m: "[32mhttps://via.placeholder.com/640x480.png/00bb66?text=posts+omnis[39m",
+        [34mviews[39m: [35m209[39m,
+        [34mpublished_at[39m: [36mnull[39m,
+        [34mcreated_at[39m: "[32m2024-11-14 18:42:12[39m",
+        [34mupdated_at[39m: "[32m2024-11-14 18:42:12[39m",
+      },
+      [34;4mApp\Models\Post[39;24m {#6346
+        [34mid[39m: [35m8[39m,
+        [34muuid[39m: "[32mcf6b2415-b71b-4cb2-9cd5-490b2dffc2d1[39m",
+        [34mtitle[39m: "[32mError occaecati occaecati illo iusto rerum vitae.[39m",
+        [34mbody[39m: """
+          [32mConsectetur autem suscipit magnam tempora exercitationem. Et in voluptas laudantium ut dolorem. Ut aut aliquid voluptatem expedita.[39m\n
+          \n
+          [32mSunt cum numquam facere sit. Vero exercitationem at possimus tempore. Reiciendis ut animi architecto quia. Tempore dolor est et voluptas.[39m\n
+          \n
+          [32mMagni ipsam assumenda sed numquam omnis. Eaque excepturi soluta aliquid sapiente. Illum minima sunt eos animi et vel non. Et est omnis velit voluptatum aperiam totam consequatur.[39m
+          """,
+        [34muser_id[39m: [35m1[39m,
+        [34mslug[39m: "[32mex-et-est-quia-rem-optio[39m",
+        [34mstatus[39m: "[32mdraft[39m",
+        [34mfeatured_image[39m: "[32mhttps://via.placeholder.com/640x480.png/00aabb?text=posts+modi[39m",
+        [34mviews[39m: [35m241[39m,
+        [34mpublished_at[39m: "[32m2024-02-26 01:55:21[39m",
+        [34mcreated_at[39m: "[32m2024-11-14 18:42:12[39m",
+        [34mupdated_at[39m: "[32m2024-11-14 18:42:12[39m",
+      },
+      [34;4mApp\Models\Post[39;24m {#6361
+        [34mid[39m: [35m9[39m,
+        [34muuid[39m: "[32m60d8983b-73a8-4890-81a3-b623e4614801[39m",
+        [34mtitle[39m: "[32mDoloribus est et sunt dolores.[39m",
+        [34mbody[39m: """
+          [32mNemo nihil numquam minus vel. Sint eos placeat placeat aut rerum ea repellendus a. Hic qui corrupti beatae ut.[39m\n
+          \n
+          [32mEos vitae voluptatem omnis exercitationem molestiae unde. Quo ab id aut nam voluptatibus et consectetur. Consequuntur aut accusantium rerum explicabo ipsum laborum dicta.[39m\n
+          \n
+          [32mId qui delectus neque quia necessitatibus dolorum distinctio. Qui neque similique tempore sit dignissimos saepe omnis. Consequatur voluptatem neque ea voluptates qui. Maiores repudiandae iste iure.[39m
+          """,
+        [34muser_id[39m: [35m1[39m,
+        [34mslug[39m: "[32mtemporibus-similique-dolor-iure-aut-numquam[39m",
+        [34mstatus[39m: "[32mdraft[39m",
+        [34mfeatured_image[39m: "[32mhttps://via.placeholder.com/640x480.png/0000cc?text=posts+repellendus[39m",
+        [34mviews[39m: [35m953[39m,
+        [34mpublished_at[39m: "[32m2024-07-20 19:51:28[39m",
+        [34mcreated_at[39m: "[32m2024-11-14 18:42:12[39m",
+        [34mupdated_at[39m: "[32m2024-11-14 18:42:12[39m",
+      },
+      [34;4mApp\Models\Post[39;24m {#6342
+        [34mid[39m: [35m10[39m,
+        [34muuid[39m: "[32mf0d4214b-d215-49d0-9811-3bea850eed61[39m",
+        [34mtitle[39m: "[32mVelit id consequatur doloremque occaecati ea ea.[39m",
+        [34mbody[39m: """
+          [32mVoluptates provident repellat perferendis iste dicta velit odio. Et illo optio id recusandae. Aliquid consequatur impedit non enim vel.[39m\n
+          \n
+          [32mExercitationem non non soluta quidem est dolorum voluptas. Magni qui alias illo minus nostrum vel explicabo iure. Ipsa velit et esse unde placeat numquam.[39m\n
+          \n
+          [32mNeque tempore similique facere accusamus cum laudantium sit quis. Eligendi dolorum vel sunt nihil quis ut. Et alias quia soluta qui.[39m
+          """,
+        [34muser_id[39m: [35m1[39m,
+        [34mslug[39m: "[32mest-sed-consectetur-totam-molestiae-ut-eaque-ad[39m",
+        [34mstatus[39m: "[32mdraft[39m",
+        [34mfeatured_image[39m: "[32mhttps://via.placeholder.com/640x480.png/00aacc?text=posts+aut[39m",
+        [34mviews[39m: [35m537[39m,
+        [34mpublished_at[39m: [36mnull[39m,
+        [34mcreated_at[39m: "[32m2024-11-14 18:42:13[39m",
+        [34mupdated_at[39m: "[32m2024-11-14 18:42:13[39m",
+      },
+    ],
+  }
+
