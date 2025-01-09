@@ -2,6 +2,7 @@
 
 namespace App\Posts\Application;
 
+use App\Users\Application\UserDto;
 use DateTime;
 
 class PostDto
@@ -11,10 +12,12 @@ class PostDto
     private string $body;
     private int $userId;
     private string $slug;
+    private string $status;
     private string $featuredImage;
     private int $views;
     private ?DateTime $publishedAt;
     private DateTime $createdAt;
+    private UserDto $user;
 
     public function __construct(
         string $id,
@@ -22,20 +25,24 @@ class PostDto
         string $body,
         int $userId,
         string $slug,
+        string $status,
         string $featuredImage,
         int $views,
         ?DateTime $publishedAt,
-        DateTime $createdAt
+        DateTime $createdAt,
+        UserDto $user
     ){
         $this->id = $id;
         $this->title = $title;
         $this->body = $body;
         $this->userId = $userId;
         $this->slug = $slug;
+        $this->status = $status;
         $this->featuredImage = $featuredImage;
         $this->views = $views;
         $this->publishedAt = $publishedAt;
         $this->createdAt = $createdAt;
+        $this->user = $user;
     }
 
     public function getId(): string
@@ -63,6 +70,11 @@ class PostDto
         return $this->slug;
     }
 
+    public function getStatus(): string
+    {
+        return $this->status;
+    }
+
     public function getViews(): int
     {
         return $this->views;
@@ -81,5 +93,10 @@ class PostDto
     public function getCreatedAt(): DateTime
     {
         return $this->createdAt;
+    }
+
+    public function getUser(): UserDto
+    {
+        return $this->user;
     }
 }

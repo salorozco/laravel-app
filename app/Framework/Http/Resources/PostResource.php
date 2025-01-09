@@ -15,17 +15,6 @@ class PostResource extends JsonResource
      */
     public function toArray(Request $request): array
     {
-        // Get the user model if it's loaded
-        $userModel = $this->whenLoaded('user');
-
-        // If the user is loaded, create a UserDto
-        $userDto = $userModel ? new UserDto(
-            $userModel->id,
-            $userModel->name,
-            $userModel->email,
-            $userModel->created_at
-        ) : null;
-
         return [
             'id' => $this->getId(),
             'title' => $this->getTitle(),
@@ -37,8 +26,7 @@ class PostResource extends JsonResource
             'views' => $this->getViews(),
             'published_at' => $this->getPublishedAt(),
             'created_at' => $this->getCreatedAt(),
-            'updated_at' => $this->getUpdatedAt(),
-            'user' => $userDto ? new UserResource($userDto) : null, // Eager load the user resource
+            'user' => new UserResource($this->getUser())
         ];
     }
 }
